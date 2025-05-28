@@ -1,0 +1,55 @@
+1.  Power BI is a business analytics tool developed by Microsoft that allows users to visualize data
+Three main components:
+Power BI Desktop – The primary development tool for creating reports.
+Power BI Service – Cloud-based platform to publish, share, and collaborate on reports.
+Power BI Mobile – App for viewing reports on mobile devices.
+2. 
+Sales Performance Tracking – Monitor sales trends, top-selling products, and revenue.
+Customer Behavior Analysis – Analyze customer preferences, purchase patterns, and retention.
+3.
+download by Microsoft Store.
+4.
+Power BI Desktop- for Report creation and 	Offline
+Power BI Service- for Report publishing, sharing, and collaboration and Online
+5.
+.pbix – Power BI project/report file.
+6.
+Power Query is a data connection and transformation tool in Power BI.
+7.
+Interactive dashboards with real-time data.
+Data model and relationships support.
+Better visuals and automation of refreshes.
+Collaboration through Power BI Service.
+8.
+Sharing and collaboration features are limited in the free version.
+9.
+A published report is a report created in Power BI Desktop and uploaded to the Power BI Service. 
+10.
+Enables users to view reports on smartphones or tablets.
+Offers touch-friendly interfaces, alerts, and offline access.
+11.
+Power BI-Cheaper (especially with Microsoft 365),User-friendly for Excel users,Great, but slightly less advanced.
+Tableau-More expensive,Requires some training,Superior, highly customizable visuals
+12. 
+Power BI integrates with:
+Azure SQL Database and Azure Synapse Analytics for live data.
+Azure Machine Learning for predictive analytics.
+Azure Active Directory for user authentication and role management.
+13.
+Gateways are bridges between on-premises data and Power BI cloud services. 
+Needed when:
+You want to refresh data in Power BI Service from an on-premise database like SQL Server.
+14.
+Low cost of entry with free and affordable Pro plans.
+Time-saving through automated refresh and reporting.
+Improved decision-making through real-time, visual analytics.
+15.
+Row-Level Security (RLS) – Controls data access based on user roles.
+Azure Active Directory – For secure sign-ins and access control.
+Data encryption – Both at rest and in transit.
+Audit logs and compliance features.
+
+
+
+
+
