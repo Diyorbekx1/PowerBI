@@ -1,0 +1,56 @@
+1. 
+ Excel files (.xlsx)
+SQL Server databases
+Web APIs 
+2.
+Click "Get Data" on the Home tab, then select the data source
+3. 
+Click "Refresh" on the Home tab to update the data from the source. This reloads the latest data into the report.
+  4. 
+CSV (.csv)
+Excel (.xlsx, .xls)
+  5. 
+It displays:
+The available tables/sheets or file previews.
+A preview of the data.
+Options to Load or Transform the data.
+6. 
+Steps:
+Click Get Data → Text/CSV → Sales_Data.csv → Open.
+In Navigator, click Transform Data.
+In Power Query, select only Product and Price columns → Click Close & Load
+ 7. 
+In Power Query:
+Select the OrderDate column.
+Go to Transform → Click Data Type → Choose Date
+8. 
+Load: Imports the data directly without modification.
+Transform Data: Opens Power Query to shape, clean, or filter the data before loading.
+9. 
+Authentication error – Incorrect login credentials or insufficient permissions.
+10. 
+Go to Home → Transform Data → Data Source Settings, then click Change Source to update the file path or connection details.
+  11.
+  let
+    Source = Csv.Document(File.Contents("C:\Path\To\Sales_Data.csv"), [Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    PromoteHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    ChangedTypes = Table.TransformColumnTypes(PromoteHeaders, {{"OrderID", Int64.Type}, {"Product", type text}, {"Quantity", Int64.Type}, {"Price", type number}, {"OrderDate", type date}}),
+    FilteredRows = Table.SelectRows(ChangedTypes, each [Quantity] > 1)
+in
+    FilteredRows
+12. 
+Go to Transform Data → Data Source Settings.
+Select the CSV source → Click Change Source → Browse to the updated file.
+13. 
+In Power Query, explicitly change data types for each column using Transform → Data Type.
+Avoid "Any" type; use specific types like Text, Number, or Date.
+14.
+Go to Get Data → SQL Server.
+Enter the server and database name.
+Use DirectQuery mode for live connection.
+Add a parameter for filtering by year in Power Query (e.g., Year = 2023).
+15.
+Use Power Automate to create a flow that:
+Triggers on new/updated data in OneDrive, SharePoint, or SQL.
+Calls a Power BI Dataset Refresh action.
+Ensures automated and scheduled refresh without manual intervention.
